@@ -1,0 +1,58 @@
+body{
+  font-family: 'Open Sans', "Trebuchet MS", Arial, sans-serif;
+  background-color: #ADD8E6;
+  text-align:center;
+}
+
+.resins{
+    margin-top:3%;
+    font-size:120%;
+
+}
+
+
+.wash{
+
+    font-size:300%;
+    font-weight:bold;
+    margin-top: 6%;
+
+}
+
+.dirs{
+    margin-top: 6%;
+    font-size:90%;
+}
+
+.download-button{
+    background-color:#FFFFFF;
+    border-width:1px;
+    border-style: solid;
+    border-color:black;
+    height:30%;
+    margin-right:20%;
+    margin-left:20%;
+}
+.start-over-button{
+    background-color:#FFFFFF;
+    border-width:1px;
+    border-style: solid;
+    border-color:black;
+    height:6%;
+    margin-top:5%;
+    margin-left:80%;
+}
+
+.download-button:hover{
+    background-color: #FFFF00;
+}
+
+.start-over-button:hover{
+    background-color: #FFFF00;
+}
+
+.button_text{
+    margin-top:1%;
+    margin-bottom:1%;
+    font-size:120%;
+}

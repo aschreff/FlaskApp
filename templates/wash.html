@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'styles/wash9.css')}}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".start-over-button").click(function(){
+        window.location.href = "/";
+    });
+
+    });
+</script>
+    <div class="resins">
+        <div class = "prev-resin">Previous Resin: {{prev}}</div>
+        <div class = "next-resin">Next Resin: {{next}}</div>
+    </div>
+    <div class = "wash">
+        {{mat[recipeDict[prev]][recipeDict[next]]}}
+    </div>
+    <div class = "dirs">
+        Click the box below to download the directions to the desktop
+    </div>
+    <div class = "download-button">
+        <a href = "downloadDirs/{{prev}}/{{next}}/{{mat[recipeDict[prev]][recipeDict[next]]}}">Download Directions</a>
+    </div>
+    <div class = "start-over-button">
+        <div class="button_text">Start Over</div>
+    </div>
+{% endblock %}

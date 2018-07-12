@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'styles/index4.css')}}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".start-button").click(function(){
+        window.location.href = "prevresin";
+    });
+
+    $(document).keypress(function(event){
+        var key = String.fromCharCode(event.which);
+        if(key == "u"){
+            window.location.href = "upload";
+        }
+
+    });
+
+    $(".start-over-button").click(function(){
+        window.location.href = "/";
+    });
+
+    });
+</script>
+    <header>
+        RR-1D Washes
+    </header>
+    <div class="top-instructs">
+        To select a new wash, press the 'Start' button below
+    </div>
+    <div class ="start-button" id="start">
+        <div class="button-text">Start</div>
+    </div>
+    <div class = "bot-instructs">
+        At any point, you can restart everything by clicking the 'Start Over' box in the lower right corner
+    </div>
+    <div class = "start-over-button">
+        <div class="button-text-start-over">Start Over</div>
+    </div>
+{% endblock %}

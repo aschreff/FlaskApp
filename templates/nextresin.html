@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'styles/resin2.css')}}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".start-over-button").click(function(){
+        window.location.href = "/";
+    });
+
+    });
+</script>
+    <header>
+        Select the resin code you are changing TO by clicking on one of the boxes below
+    </header>
+    <div class="resins">
+        <div class = "prev-resin">Previous Resin: {{id}}</div>
+        <div class = "next-resin">Next Resin: --</div>
+    </div>
+    <div class = "buttons">
+    {% for recipe in recipes %}    
+        <div class = "button" id = {{recipe}}>
+            <div class = "button_text"><a href = "wash/{{id}}/{{recipe}}">{{recipe}}</a></div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class = "start-over-button">
+        <div class="button_text">Start Over</div>
+    </div>
+{% endblock %}

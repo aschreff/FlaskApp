@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'styles/end4.css')}}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".start-over-button").click(function(){
+        window.location.href = "/";
+    });
+
+    });
+</script>
+
+    <div class = "top">Directions have been successfully downloaded to your desktop</div>
+
+    <div class = "start-over-button">
+        <div class="button_text">Start Over</div>
+    </div>
+
+
+{% endblock %}
